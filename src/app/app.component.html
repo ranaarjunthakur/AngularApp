@@ -1,0 +1,34 @@
+<!-- <div class="container">
+    <app-cockpit (serverCreated)="onServerAdded($event)" (bpCreated)="onBlueprintAdded($event)"></app-cockpit>
+    <div class="row">
+        <div class="col-xs-12">
+            <app-server *ngFor="let serverElement of serverElements" [srvelement]="serverElement"></app-server>
+        </div>
+    </div>
+</div> -->
+<!-- 
+<div>
+    <input #newFruit type="text" placeholder="Enter a new fruit">
+    <button (click)="addFruit(newFruit.value)">Add Fruit</button>
+    <app-server-element [data]="fruits" ></app-server-element>
+</div>
+
+
+<h3>Parent Component</h3>
+
+<label>Parent Component</label>
+<input type="text" #pcomponent (keyup)="0"/>
+
+<p>Value of child component is: {{ CData }}</p>
+<app-server-element (PData)="pcomponent.value" (childEvent)="CData=$event"></app-server-element> -->
+
+
+<h1>Routig Buttons</h1>
+<h3>Passing Params,fragments,QueryParams in routing url</h3>
+<button class="btn" type="button" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"  [routerLink]="['/secondPage',5,'edit']" [queryParams]="{allowEdit:'5'}" fragment="loading" >Second Page</button>
+<br>
+<br>
+<button class="btn" type="button"   [routerLink]="['/firstPage']">First Page</button>
+
+
+<router-outlet></router-outlet>

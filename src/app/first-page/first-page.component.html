@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="content">
+      <div class="front">
+        First 
+      </div>
+      <div class="back">
+        Back!
+      </div>
+    </div>
+  </div>
+
+  <div *ngFor="let products of Products">
+    <a [routerLink]="['/child/', products.id,products.name,products.description]">Product Detail (with Params)</a>
+<br>
+    <a [routerLink]="['/secondPage','1','edit']" [queryParams]="{id:'1'}">Product Detail 1 (withQueryPArams)</a>
+<br>
+    <a [routerLink]="['/secondPage','2','edit']" [queryParams]="{id:'2'}">Product Detail 2 (withQueryPArams)</a>
+<br>
+    <a (click)="navToPage(4)">Product Detail 3 (withQueryPArams)</a>
+
+    <br>
+    <a [routerLink]="['/secondPage',5,'edit']" [queryParams]="{allowEdit:'5'}" fragment="loading" >Product Detail 2 (withQueryPArams & fragments)</a>
+
+</div>
